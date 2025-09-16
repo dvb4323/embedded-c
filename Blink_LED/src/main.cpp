@@ -1,18 +1,17 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
-
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  // Đặt chân 2 của bo mạch (LED tích hợp) ở chế độ OUTPUT
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  // Bật đèn LED
+  digitalWrite(LED_BUILTIN, HIGH);
+  // Chờ 1000 mili giây (1 giây)
+  delay(1000);
+  // Tắt đèn LED
+  digitalWrite(LED_BUILTIN, LOW);
+  // Chờ 1000 mili giây (1 giây)
+  delay(1000);
 }
